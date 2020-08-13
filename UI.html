@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	<style type="text/css">
+		.parent{
+			width: 250px;
+			margin: 100px auto;
+
+		}
+		body{
+			background: #e4e4e4;
+		}
+		.input_background{
+			background: #22d1ee;
+			width: 250px;
+			height: 150px;
+			border-radius: 20px;
+		}
+        .header{
+        	font-family: arial;
+        	padding: 0px 0px 0px 30px;
+        	color: #fff;
+        	display: inline-block;
+        	margin-bottom: 0px;
+        	margin-top: 30px;
+        }
+        #text{
+        	margin-left: 30px;
+        	width: 120px;
+        	background: #22d1ee;
+        	border: none;
+        	outline: none;
+        	color: #fff;
+        	margin-bottom: 30px;
+        }
+        ::placeholder {
+             color: #fff;
+        }
+
+        .btn{
+        	border-radius:50%;
+        	width: 40px;
+        	height: 40px;
+        	outline: none;
+        	border: none;
+        	margin: 0px 0px 0px 65px;
+        	padding: 10px;
+        }
+        .fas fa-plus{
+        	color: red;
+        }
+        .one{
+        	width: 100%;
+        	background: #fff;
+        	border-radius: 20px;
+        	padding: 10px 0px 10px 0px;
+        }
+        #list{
+        	list-style-type: none;
+        	padding: 10px;
+        }
+        li{
+        	padding: 10px;
+        	color: #22d1ee;
+        	font-family: arial;
+        	font-weight: bold;
+        }
+        li:hover{
+        	background: #dee1ec;
+        	border-radius: 7px;
+        }
+        .del_btn{
+        	border: none;
+        	background: no-repeat;
+        	outline: none;
+        	margin-left: 0px;
+        	padding: 0px;
+            display: none;
+        }
+        .ed_btn{
+        	border: none;
+        	background: no-repeat;
+        	outline: none;
+        	padding: 0px;
+            display: none;
+        	   }
+         li:hover .del_btn,li:hover .ed_btn{
+            display: inline-block;
+         }           
+       
+   .btn_border{
+        	display: inline-block;
+        	width: 170px;
+              }
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="input_background">
+			<h3 class="header">To Do List</h3>
+			<button class="btn" onclick="add_list()">
+			<i class="fas fa-plus fa-fw" style="font-size:15px;color:#22d1ee;"></i>
+		    </button>
+			<input type="text" placeholder="Say Something ..." name="" id="text">
+			
+			<div class="one">
+				<ul id="list"></ul>
+			</div>
+			
+			
+		</div>
+	</div>
+     
+	<script type="text/javascript">
+		let input = document.getElementById('text');
+		let list_value = document.getElementById('list');
+		let min_text = 5;
+        let id = 1;
+
+        //Edit Control
+        function edit_text(edId){
+        let current = document.getElementById(`item-${edId}`);
+        let current_edit = prompt("Enter your new list instant of",current.innerHTML);
+        if(text_filter(current_edit)){
+           current.innerHTML = current_edit; 
+           }else{
+            console.log('Edit text error');
+                }
+        
+        }
+
+        //Delete Control
+        function delete_text(delId){
+         let current = document.getElementById(`list-${delId}`);
+         let current_item = document.getElementById(`item-${delId}`).innerHTML;
+         let del_confirm= confirm(`Are you sure delete? ${current_item}`);
+
+         if(del_confirm){
+            list_value.removeChild(current);
+            console.log(`You delete ${current_item}`)
+        }else{
+            console.log('Delete Cancel');
+        }
+        }
+
+
+		//Delete & Edit btn
+		function text_btn(x){
+		list_value.innerHTML += 
+		               `<li id="list-${id}">
+						<div class="btn_border" id="item-${id}">${x}</div>
+						<button class="ed_btn" onclick='edit_text(${id})'>
+						<i class="fas fa-edit fa-fw" style="color: #17b978;font-size: 12px;"></i>
+						</button>
+						<button class="del_btn" onclick='delete_text(${id})'>
+						<i class="fas fa-trash-alt fa-fw" style="color: tomato;font-size: 10px;"></i>
+						</button>			
+					    </li>`;
+                        id++;
+		                    }
+
+		//Text Filter
+        function text_filter(text){
+        	if(text){
+                if(text.length >= min_text){
+                 return text;
+                }else{
+                 alert('Minium letter is 5');
+                }
+        	    }else{
+        		alert('Cant do work Empty letter');
+        	     }
+
+                     }
+
+		//input btn
+		function add_list(){
+		let value = text_filter(input.value);
+           if(value){
+            text_btn(value);
+            input.value = "";
+			console.log(`You add new list **${value}`);
+           }
+		}
+		
+	</script>
+
+</body>
+</html>
