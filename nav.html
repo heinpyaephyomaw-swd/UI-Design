@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nav List</title>
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin: 0px;
+		}
+		.parent{
+			background: #555;
+			overflow: hidden;
+
+		}
+		.parent a{
+			color: #fff;
+			font-family: arial;
+			text-decoration: none;
+			font-size: 17px;
+			padding: 10px 15px;
+			float: left;
+		}
+		.drop_down{
+			float: left;
+		}
+		.btn{
+			color: #fff;
+			font-family: arial;
+			font-size: 17px;
+			padding: 10px 15px;
+			background: #555;
+			border: none;
+			outline: none;
+		}
+		.btn_drop{
+			position: absolute;
+			background: #888;
+			display: none;
+		}
+		.btn_drop a{
+			float: none;
+			display: block;
+		}
+		.parent a:hover,.btn:hover{
+			background: #222;	
+		}
+		.drop_down:hover .btn_drop{
+			display: block;
+		}
+
+		.service{
+			font-size: 25px;
+			font-family: arial;
+			text-align: center;
+			
+		}
+		.service_parent{
+			display: flex;
+			justify-content: center;
+		}
+		.service_detail{
+			width: 25%;
+			height: 350px;
+			background: #666;
+			border-radius: 10px;
+			margin: 10px;
+			padding-top: 20px;
+
+		}
+        h2{
+        	font-family: arial;
+        	color: #fff;
+        	text-align: center;
+        	font-size: 22px;
+        	text-decoration: underline;
+        }
+        .para{
+        	text-align: justify;
+        	padding: 10px 25px;
+        	font-family: arial;
+        	color:#fff;
+        	font-size: 16px;
+        	text-indent: 50px;
+
+        }
+        .gallery{
+        	display: flex;
+        	justify-content: center;
+        	
+
+        }
+        .gallery_pic{
+        	width: 50%;
+        	height: 500px;
+        }
+        .pic_one{
+        	width: 100%;
+        	height: 166px;
+        	display: flex;
+        	margin-bottom: 10px;
+        }
+        .pic_two{
+        	width: 100%;
+        	height: 166px;
+        	display: flex;
+        	margin-bottom: 10px;
+        }
+         .pic_three{
+        	width: 100%;
+        	height: 166px;
+        	display: flex;
+        	margin-bottom: 10px;
+        }
+        .one{
+        	width: 32%;
+        	height: 100%;
+        	margin: 10px;
+
+        }
+
+        .about{
+        	font-size: 25px;
+			font-family: arial;
+			text-align: center;
+			margin: 70px;
+        }
+        .about_us{
+        	display: flex;
+        	height: 400px;
+        }
+        .our_about{
+          width: 50%;
+          height:100%;
+          margin: 10px;
+        }
+        .activity_parent{
+           height: 250px;
+           display: flex;
+           justify-content: center;
+        }
+        .video{
+        	width: 25%;
+        	height:100%;
+        	margin: 10px;
+
+        }
+        .video_a{
+        	border-radius: 10px;
+        }
+        .content_parent{
+        	height: 400px;
+        	display: flex;
+        }
+        .content_item_one{
+        	width: 70%;
+        	height: 100%;
+        	margin-right: 10px;
+        }
+        .content_item_two{
+        	width: 30%;
+        	height: 100%;
+        	border: 1px solid #eee;
+        	margin-left: 10px;
+        }
+        input{
+        	width: 90%;
+        	height: 50px;
+        	margin: 5px;
+        	font-size: 20px;
+        	border: 2px solid pink;
+        	font-family: arial;
+        }
+        textarea{
+        	width: 90%;
+        	height: 120px;
+        	margin: 5px;
+        	font-size: 20px;
+        	font-family: arial;
+        	border: 2px solid pink;
+        }
+        .content_item_two button{
+        	margin: 5px;
+        	padding: 7px 20px;
+        	font-size: 20px;
+        	font-family: arial;
+        	font-weight: bold;
+        	border: 4px solid red;
+        	border-radius: 20px;
+        	background: #eb5afd;
+
+        }
+
+
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<a href="">LOBELIA</a>
+		<a href="">Home</a>
+
+		<div class="drop_down">
+			<button class="btn">Service</button>
+			<div class="btn_drop">
+				<a href="">Balloon Tour</a>
+				<a href="">Inbound Tour</a>
+				<a href="">Outbound Tour</a>
+			</div>	
+		</div>
+
+		<a href="">Gallery</a>
+		<a href="">About Us</a>
+		<a href="">Activity</a>
+		<a href="">Content Us</a>
+	</div>
+
+	               <!-- Image -->
+
+	         <img src="a3.jpg" width="100%">    
+	          
+	         <!--   SERVICE  --> 
+
+	        <h4 class="service">S E R V I C E</h4> 
+
+	   <div class="service_parent">
+	   	<div class="service_detail">
+	   		<h2>Balloon Tour</h2>
+	   		<p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	   		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	   		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	   	</div>
+	   	<div class="service_detail">
+	   		<h2>Inbound Tour</h2>
+	   		<p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	   		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	   		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	   	</div>
+	   	<div class="service_detail">
+	   		<h2>Outbound Tour</h2>
+	   		<p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	   		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	   		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	   	</div>
+	   
+	   </div>
+
+
+         <!--  Gallery -->
+
+         <h4 class="service">G A L L E R Y</h4>
+
+         <div class="gallery">
+         	<div class="gallery_pic">
+         		<div class="pic_one">
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			
+         		</div>
+
+         		<div class="pic_two">
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         		</div>
+
+         		<div class="pic_three">
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         			<div class="one">
+         				<img src="g12.jpg" width="100%"
+         				height="100%">
+         			</div>
+         		</div>
+         				
+         	</div>
+
+         </div>
+
+         <!-- About US -->
+
+
+         <h4 class="about">A B O U T &nbsp; U S</h4>
+         <div class="about_us">
+         	<div class="our_about">
+         		<img src="b.jpg" width="100%" height="100%">
+         	</div>
+         	<div class="our_about">
+         		<h3>What We Do?</h3>
+         		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+         		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+         		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+         		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         	</div>
+         </div>
+
+
+      <!--  Activity -->
+      <h4 class="service">A C T I V I T Y</h4>
+      <div class="activity_parent">
+      	<div class="video">
+      		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/bPcp7tXfhPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video_a"></iframe>
+      	</div>
+      	<div class="video">
+      		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/bPcp7tXfhPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video_a"></iframe>
+      	</div>
+      	<div class="video">
+      		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/bPcp7tXfhPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video_a"></iframe>
+      	</div>
+      </div>
+
+      <!-- Content Us -->
+   
+   <h4 class="service">C O N T E N T &nbsp;U S</h4>
+    <div class="content_parent">
+    	<div class="content_item_one">
+    		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488797.790191606!2d95.90136538115698!3d16.839609804273582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2sYangon!5e0!3m2!1sen!2smm!4v1593114523589!5m2!1sen!2smm" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    	</div>
+    	<div class="content_item_two">
+    		<input type="text" name="" placeholder="Enter Name"><br>
+    		<input type="number" name="" placeholder="Enter Phone"><br>
+    		<input type="email" name="" placeholder="Email"><br>
+    		<input type="" name="" placeholder="Enter Username">
+    		<textarea placeholder="Enter Address"></textarea><br>
+    		<button>S E N T</button>
+    	</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+
+</body>
+</html>
